@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Cover</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Magazine Cover Container */
+        .magazine-cover {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('https://th.bing.com/th/id/OIP.1itFZ-MLuC6LhNqKDJpFrQHaE8?rs=1&pid=ImgDetMain') no-repeat center center/cover;
+            overflow: hidden;
+        }
+
+        /* Overlay for Readability */
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: 0;
+        }
+
+        /* Magazine Title */
+        .magazine-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            z-index: 1;
+        }
+
+        /* Headlines */
+        .headline-container {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 15px 25px;
+            margin: 10px;
+            border-radius: 8px;
+            max-width: 600px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            z-index: 1;
+        }
+
+        .headline-container:hover {
+            transform: scale(1.05);
+        }
+
+        .headline {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .subtext {
+            font-size: 1rem;
+            color: #444;
+        }
+
+        /* Decorative Line */
+        .decorative-line {
+            position: absolute;
+            top: 15%;
+            width: 70%;
+            height: 5px;
+            background: #ffd700;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        /* Special Edition Badge */
+        .badge {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: #ff4500;
+            color: white;
+            padding: 7px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        /* Subscription Button */
+        .subscribe-btn {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #ff4500;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .subscribe-btn:hover {
+            background: #d93700;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .magazine-title {
+                font-size: 3rem;
+            }
+
+            .headline-container {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="magazine-cover">
+        <!-- Background Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Magazine Title -->
+        <h1 class="magazine-title">GLOBAL INSIGHTS</h1>
+
+        <!-- Headlines -->
+        <div class="headline-container">
+            <h2 class="headline">Rising Tensions in the South China Sea</h2>
+            <p class="subtext">How geopolitical conflicts are shaping global trade and security.</p>
+        </div>
+
+        <div class="headline-container">
+            <h2 class="headline">India and EU Strengthen Strategic Ties</h2>
+            <p class="subtext">New trade agreements set to boost economic cooperation.</p>
+        </div>
+
+        <div class="headline-container">
+            <h2 class="headline">Middle East Diplomacy in Focus</h2>
+            <p class="subtext">Efforts to stabilize the region and the role of global superpowers.</p>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="decorative-line"></div>
+        <div class="badge">SPECIAL EDITION</div>
+
+        <!-- Subscription CTA -->
+        <button class="subscribe-btn">Subscribe Now</button>
+    </div>
+
+</body>
+</html>
